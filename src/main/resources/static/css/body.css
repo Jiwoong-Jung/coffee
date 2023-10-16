@@ -1,0 +1,7 @@
+#wrap {
+position:inherit;
+min-height: 76%;
+}
+body{margin-bottom:50px;}
+#wrap>* {
+height:100%;}

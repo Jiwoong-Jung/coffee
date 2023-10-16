@@ -1,0 +1,30 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/main_layout">
+
+<th:block layout:fragment="main">
+    <main>
+        <div class="container-md">
+            <div>
+                <form class="d-flex" role="search" method="get" th:object="${bookSearch}">
+                    <input class="form-control me-2" type="text" th:field="*{bookTitle}" placeholder="책제목" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" style="width: 64px;">검색</button>
+                </form>
+            </div>
+        </div>
+        <div id="main_cards" class="container">
+            <div class="cards-box row row-cols-1 mx-0">
+                <div class="main_card col mx-0" style="width: 18rem;" th:each="book : ${books}" >
+                    <img src="" th:src="'/./image/coffee/coffee'+${book.b_no}+'.png'" class="card-img-top" alt="...">
+                    <hr class="my-1"/>
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${book.title}">책 제목</h5>
+                        <p class="card-text" th:text="${book.author}">지은이</p>
+                        <a href="" th:href="@{{bookId}(bookId=${book.b_no})}" class="btn btn-primary">대여하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</th:block>
+</html>

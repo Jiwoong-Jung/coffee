@@ -1,0 +1,55 @@
+        *{list-style: none;}
+        #main_cards{
+            margin: 0 auto;
+        }
+        .main_card {
+            margin-top: 20px;
+            margin: 10px;
+        }
+
+
+        @media (min-width: 768px) {
+
+        }
+
+        #main_cards {
+            margin: 0 auto;
+            overflow: scroll;
+            max-height: 70%;
+        }
+
+        .d-flex{
+            margin-top: 2%;
+            margin-bottom: 2%;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-outline-success {
+            color: #3e3e3e;
+            border-color: #3e3e3e;
+        }
+
+        .btn-outline-success:hover {
+            color: #ffffff;
+            background-color: #3e3e3e;
+            border-color: #ffffff;
+        }
+
+        .btn-primary {
+            color: #3e3e3e;
+            background-color: #ffffff;
+            border-color: #3e3e3e;
+        }
+
+        .btn-primary:hover {
+            color: #ffffff;
+            background-color: #3e3e3e;
+            border-color: #ffffff;
+        }
+
+        .myp{
+            margin-bottom:0;
+        }
+

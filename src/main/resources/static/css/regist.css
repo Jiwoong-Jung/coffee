@@ -1,0 +1,73 @@
+
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    height: 100%;
+    z-index: 2pz;
+
+}
+.signup h1{
+    font-size: 40px;
+    text-align: center;
+    letter-spacing:10px;
+
+}
+.area{
+    width: 400px;
+    margin-top: 30px;
+}
+.area input{
+    width: 100%;
+    padding: 10px ;
+    border-radius: 10px;
+    border-style:solid;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.select {
+    width: 400px;
+    margin-top: 30px;
+}
+.select input[type=radio]{
+    display: none;
+
+}
+.select input[type=radio]+label{
+
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+    height: 30px;
+    width: 195px;
+    border: 1px solid;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+.select input[type=radio]+label{
+    background-color: #fff;
+    color: #333;
+}
+.select input[type=radio]:checked+label{
+    background-color: #333;
+    color: #fff;
+}
+
+.btn button{
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: rgb(229, 229, 233);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.signup fieldset{
+    border-style: none;
+}

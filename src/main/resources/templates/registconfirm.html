@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/main_layout">
+<th:block layout:fragment="registconfirm">
+    <link rel="stylesheet" href="css/registconfirm.css">
+<section class="welcome">
+
+        <h1>Welcome</h1>
+    <div id="test">
+        <div class="area">
+            회원 가입이 완료되었습니다
+        </div>
+
+        <div class="btn">
+            <button onclick="location.href='/'">홈으로</button>
+            <button onclick="location.href='/login'">로그인</button>
+        </div>
+    </div>
+
+</section>
+</th:block>
+</html>

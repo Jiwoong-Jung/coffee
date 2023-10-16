@@ -1,0 +1,54 @@
+#footer_box{
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+
+}
+#footer_logo{
+    float: left;
+    margin: 30px 0 0 ;
+    height: 100px;
+}
+#footer_logo>img{
+    height: 100%;
+    width: 100%;
+}
+#adress{
+    float: right;
+    color: white;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-size:15px;
+
+
+}
+#address>ul,li{
+    list-style: none;
+    margin-bottom:5px
+}
+/* footer 하단 고정 [S] */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#body-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+#body-content {
+    margin-top: 100px;
+    padding-bottom: 150px; /* footer의 높이 */
+}
+
+footer {
+    width: 100%;
+    height: 150px; /* footer의 높이 */
+    position: inherit;
+    bottom: 0;
+    left: 0;
+    margin-top: 30px;
+    background-color: #3F3222;
+}

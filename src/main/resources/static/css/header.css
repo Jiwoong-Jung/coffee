@@ -1,0 +1,18 @@
+.d-flex{
+  margin-left: -5px;
+}
+.navbar-expand{
+  height: 50px;
+}
+.collapse{
+  margin-left: 30px;
+}
+.navbar-nav>li>#logout{
+  opacity: 0.5;
+}
+.d-flex{
+  margin-left: 10px;
+}
+.option{
+  float: right;
+}

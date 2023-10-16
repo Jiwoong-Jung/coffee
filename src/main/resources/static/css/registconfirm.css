@@ -1,0 +1,41 @@
+
+.welcome{
+    position: relative;
+    height: 100%;
+}
+.welcome h1{
+    font-size: 40px;
+    text-align: center;
+    letter-spacing:10px;
+}
+
+
+.area{
+    width: 400px;
+    margin-top: 30px;
+    padding: 10px ;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+}
+
+
+.btn button{
+    width: 80%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: rgb(229, 229, 233);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.welcome{
+    padding-top:200px;
+}
+
+#test{
+    text-align: center;
+}

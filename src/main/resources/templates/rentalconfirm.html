@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/main_layout">
+<th:block layout:fragment="rentalconfirm">
+    <div class="container">
+    <div class="rental" style="margin-top: 20%;
+    text-align: center;
+    font-size: 50px;"> <b>도서가 대여되었습니다.</b></div>
+    
+    <form action="/" class="bnt" style="margin-top: 50px;">
+    <div class="d-grid gap-2 col-6 mx-auto" id="bnt">
+        <button class="btn btn-primary" type="submit">Button</button>
+      </div>
+    </form>
+    </div>
+</th:block>
+</html>

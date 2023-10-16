@@ -1,0 +1,42 @@
+*{
+    list-style: none;
+}
+#dd input{
+    width: 70%;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+#dd button{
+    float: right;
+}
+#book{
+    font-size: 50px;
+    font-weight: bold;
+}
+#title{
+    font-size: 30px;
+    font-weight: bold;
+    width:150px;
+    /*float:left;*/
+
+}
+#title1{
+    font-size: 25px;
+    font-weight: bold;
+    width: 170px;
+    /*float:right;*/
+
+}
+#author{
+    font-size: 30px;
+    font-weight: bold;
+    width:150px;
+    /*float:left;*/
+
+}
+#author1{
+    font-size: 25px;
+    font-weight: bold;
+    width: 170px;
+    /*float:right;*/
+}
