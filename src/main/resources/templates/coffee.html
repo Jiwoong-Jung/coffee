@@ -7,14 +7,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/js/coffee.js"></script>
 
-    <!-- 도서 상세페이지 -->
     <div class="container">
         <div class="row">
-            <!-- 도서 사진 -->
+            <!-- 커피 사진 -->
             <div class="col-md-4">
                 <img src="" th:src="'/./image/coffee/gabea'+${coffee.b_no}+'.png'" class="card-img-top" alt="...">
             </div>
-            <!-- 도서 정보 -->
+            <!-- 커피 정보 -->
             <div class="col-sm-5" id="book1" th:object="${coffee}">
                 <br><br><br><br>
                 <div id="book">커피정보</div>
@@ -55,8 +54,6 @@
         </div>
     </div>
 
-
-    <!-- 리뷰 작성, 리뷰 확인 -->
     <div class="container">
         <div class="" id="dd">
             <form th:action="@{reviewregist}" method="post" class="book" th:object="${coffee}">

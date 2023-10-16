@@ -15,11 +15,6 @@ public class CoffeeListRepositoryJpa implements CoffeeListRepoitory {
 
     private final SearchDataRepository repository;
 
-    /**
-     * 책 검색
-     * @param cond
-     * @return
-     */
     @Override
     public List<CoffeeList> findAll(CoffeeListSearchCond cond) {
         String bookTitle = cond.getBookTitle();

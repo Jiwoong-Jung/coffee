@@ -19,7 +19,6 @@ public class MainController {
 
     private final CoffeeListService coffeeListService;
 
-    // 책 검색
     @GetMapping("/")
     public String main(@ModelAttribute("bookSearch") CoffeeListSearchCond bookSearch, Model model, HttpSession session){
         List<CoffeeList> books = coffeeListService.findBooks(bookSearch);

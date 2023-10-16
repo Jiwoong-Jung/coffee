@@ -34,7 +34,7 @@ public class RegistController {
     }
 
     @PostMapping("/idcheck")
-    @ResponseBody //이게 없었더니 오류남
+    @ResponseBody
     public String checkIdExist(String id) { //매개변수를 "id" :$("#m_id").val() 에서 id와 같게 설정해줘야함
         String result1 = registService.checkId(id);
         return result1;
