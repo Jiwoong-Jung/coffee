@@ -69,7 +69,7 @@ public class CoffeeController {
         model.addAttribute("coffee", book);
         model.addAttribute("orderDetail",list);
 
-        return "book";
+        return "coffee";
     }
 
     @GetMapping("/rental")
@@ -91,7 +91,7 @@ public class CoffeeController {
     @GetMapping("/check")
     @ResponseBody
     public String check() {
-        return "ok";
+        return "no";
     }
 
     @PostConstruct
@@ -99,7 +99,7 @@ public class CoffeeController {
         IntStream.rangeClosed(1, 4).forEach(i -> {
 
             CoffeeList board = CoffeeList.builder()
-                    .title("coffee" + i)
+                    .title("gabea" + i)
                     .author("" + i + ",000")
                     .build();
 

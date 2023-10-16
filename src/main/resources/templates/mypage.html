@@ -9,7 +9,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    대여 중 내역
+                    주문 완료 내역
                 </button>
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
@@ -17,12 +17,12 @@
                     <div class="row">
                         <div class="col-sm-6" th:each="present : ${present}">
                             <div class="card">
-                                <img src="" th:src="'/./image/coffee/coffee'+${present.b_no}+'.png'" class="card-img-top" alt="...">
+                                <img src="" th:src="'/./image/coffee/gabea'+${present.b_no}+'.png'" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title" th:text="${present.title}"></h5>
-                                    <p class="myp">대여 시작일</p>
+                                    <p class="myp">주문 일시</p>
                                     <p class="card-text" th:text="${#temporals.format(present.r_startdate,'yyyy-MM-dd HH:mm:ss')}"></p>
-                                    <p class="myp">대여 종료일</p>
+                                    <p class="myp">완료예상 일시</p>
                                     <p class="card-text" th:text="${#temporals.format(present.r_enddate,'yyyy-MM-dd HH:mm:ss')}"></p>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    대여 완료 내역
+                    서비스 내역
                 </button>
             </h2>
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
@@ -42,12 +42,12 @@
                     <div class="row">
                         <div class="col-sm-6" th:each="post : ${post}">
                             <div class="card">
-                                <img src="" th:src="'/./image/coffee/coffee'+${post.b_no}+'.png'" class="card-img-top" alt="...">
+                                <img src="" th:src="'/./image/coffee/gabea'+${post.b_no}+'.png'" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title" th:text="${post.title}"></h5>
-                                    <p class="myp">대여 시작일</p>
+                                    <p class="myp">주문 시작일시</p>
                                     <p class="card-text" th:text="${#temporals.format(post.r_startdate,'yyyy-MM-dd HH:mm:ss')}"></p>
-                                    <p class="myp">대여 종료일</p>
+                                    <p class="myp">주문 완료일시</p>
                                     <p class="card-text" th:text="${#temporals.format(post.r_enddate,'yyyy-MM-dd HH:mm:ss')}"></p>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
         <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                    리뷰 목록
+                    주문완료 목록
                 </button>
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
@@ -68,11 +68,11 @@
                         <div class="row1">
                             <tr th:each="orderDetail : ${orderDetail}">
                                 <div class="col">닉네임:<td th:text="${orderDetail.nickname}"></td></div>
-                                <div class="col">제 목:<td th:text="${orderDetail.title}"></td></div>
-                                <div class="col">리 뷰:<td th:text="${orderDetail.answer}"></td></div>
+                                <div class="col">내 용:<td th:text="${orderDetail.title}"></td></div>
+                                <div class="col">수 량:<td th:text="${orderDetail.answer}"></td></div>
                                 <div th:if="${flag}=='u' and ${rid}==${orderDetail.id}">
                                     <form th:action="@{reviewUpdateDo}">
-                                        리뷰:<input name="answer" size=20 th:value="${orderDetail.answer}"/>
+                                        금액:<input name="answer" size=20 th:value="${orderDetail.answer}"/>
                                         <input name="review_num" type="hidden" th:value="${orderDetail.id}">
                                         <input type="submit" value="수정완료">
                                     </form>

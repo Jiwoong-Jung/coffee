@@ -5,25 +5,25 @@
 <th:block layout:fragment="book">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/js/book.js"></script>
+    <script src="/js/coffee.js"></script>
 
     <!-- 도서 상세페이지 -->
     <div class="container">
         <div class="row">
             <!-- 도서 사진 -->
             <div class="col-md-4">
-                <img src="" th:src="'/./image/coffee/coffee'+${coffee.b_no}+'.png'" class="card-img-top" alt="...">
+                <img src="" th:src="'/./image/coffee/gabea'+${coffee.b_no}+'.png'" class="card-img-top" alt="...">
             </div>
             <!-- 도서 정보 -->
             <div class="col-sm-5" id="book1" th:object="${coffee}">
                 <br><br><br><br>
-                <div id="book">도서정보</div>
+                <div id="book">커피정보</div>
                 <br><br>
                 <ul>
                     <li>
                         <div class="title">
                             <div id="title">
-                                도서명
+                                커피명
                             </div>
                             <div id="title1" th:text="*{title}">
                             </div>
@@ -33,7 +33,7 @@
                     <li>
                         <div class="author">
                             <div id="author">
-                                저자
+                                금액
                             </div>
                             <div id="author1" th:text="*{author}">
                             </div>
@@ -60,7 +60,7 @@
     <div class="container">
         <div class="" id="dd">
             <form th:action="@{reviewregist}" method="post" class="book" th:object="${coffee}">
-                <input type="text" name="answer" placeholder="도서리뷰">
+                <input type="text" name="answer" placeholder="개수 입력바랍니다.">
                 <input type="hidden" name="b_no" th:value="${coffee.b_no}">
                 <button type="submit" class="btn btn-primary">수량입력</button>
             </form>
@@ -70,8 +70,8 @@
             <thead>
             <tr>
                 <th scope="col">번호</th>
-                <th scope="col">작성자</th>
-                <th scope="col">내용</th>
+                <th scope="col">주문자</th>
+                <th scope="col">개수</th>
                 <th scope="col">수정</th>
             </tr>
             </thead>
