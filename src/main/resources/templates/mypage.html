@@ -72,7 +72,7 @@
                                 <div class="col">수 량:<td th:text="${orderDetail.answer}"></td></div>
                                 <div th:if="${flag}=='u' and ${rid}==${orderDetail.id}">
                                     <form th:action="@{reviewUpdateDo}">
-                                        금액:<input name="answer" size=20 th:value="${orderDetail.answer}"/>
+                                        수 량:<input name="answer" size=20 th:value="${orderDetail.answer}"/>
                                         <input name="review_num" type="hidden" th:value="${orderDetail.id}">
                                         <input type="submit" value="수정완료">
                                     </form>
