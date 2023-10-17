@@ -50,8 +50,10 @@ public class CoffeeRepositoryImp implements CoffeeRepository {
         String title = orderCoffee.getTitle();
         int result = em.createNativeQuery("" +
                         "insert into rentalbook(m_id,b_no,title,r_startdate,r_enddate)" +
-                " values(?,?,?,now(), DATEADD('MINUTE', 1, CURRENT_TIMESTAMP))")
+                " values(?,?,?,now(), DATE_ADD(NOW(), INTERVAL 1 MINUTE))")
 
+//        " values(?,?,?,now(), DATEADD('MINUTE', 1, CURRENT_TIMESTAMP))")
+//        DATE_ADD(NOW(), INTERVAL 1 MINUTE)
 //                " values(?,?,?,now(), DATEADD('MONTH', 1, CURRENT_TIMESTAMP))")
 //                        " values(?,?,?,now(), DATE_ADD(now(), INTERVAL 30 day))")
                 .setParameter(1,m_id)
